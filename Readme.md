@@ -17,11 +17,6 @@ To get an ip addr on the NAT network we need to make sure the interface is the s
 
 (Show screenshots here)
 
-# Second Disk
-
-This disk will be use to build our linux on it. We just need to create a second disk for qemu and add the hardware to our VM. Depending on which interface you choose for this device you may need to change some things in future command.
-
-
 # User root set up
 
 From debian user connect to root:
@@ -39,4 +34,13 @@ Now the root user password is root
 Now run the update and requirements script
 ```
 sh requirements.sh
+```
+
+# Second Disk
+
+This disk will be use to build our linux on it. We just need to create a second disk for qemu and add the hardware to our VM. Depending on which interface you choose for this device you may need to change some things in the script.
+Make sure the script use the correct device then run it.
+
+```
+sh partition.sh
 ```
