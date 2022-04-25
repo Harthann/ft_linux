@@ -16,3 +16,22 @@ If you don't use qemnu you can directly use the VBox image to import config insi
 To get an ip addr on the NAT network we need to make sure the interface is the same inside `/etc/network/interfaces` than the one from `ip addr`
 
 (Show screenshots here)
+
+# User root set up
+
+From debian user connect to root:
+```
+sudo su -
+```
+Then change root password:
+```
+passwd <<< $(echo root; echo root)
+```
+Now the root user password is root
+
+# Update and requirement
+
+Now run the update and requirements script
+```
+sh requirements.sh
+```
