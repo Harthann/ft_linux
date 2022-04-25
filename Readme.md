@@ -13,4 +13,4 @@ If you don't use qemnu you can directly use the VBox image to import config insi
 
 # Network
 
-To get an ip addr on the NAT network we need to make sure the interface is the same inside `/etc/network/interfaces` tha the one from `ip addr`
+To get an ip addr on the NAT network we need to make sure the interface is the same inside `/etc/network/interfaces` than the one from `ip addr`
