@@ -3,6 +3,7 @@
 ##############################
 
 su -
+
 apt update
 apt upgrade
 
@@ -36,6 +37,11 @@ apt install $DEBS -y
 rm -rf /bin/sh
 ln -s /bin/bash /bin/sh
 
+################
+##  ROOT ENV  ##
+################
+
+echo 'export LFS=/mnt/lfs' >> .bashrc
 
 # apt-file update
 
