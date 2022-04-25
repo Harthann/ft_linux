@@ -28,12 +28,14 @@ m4
 make
 patch
 texinfo
+parted
 "
 
 apt install $DEBS -y
 
 rm -rf /bin/sh
 ln -s /bin/bash /bin/sh
+
 
 # apt-file update
 
