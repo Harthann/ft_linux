@@ -7,3 +7,7 @@ Unzip the file then convert vdi to qcow2
 ```
 qemu-img convert -f vdi -O qcow2 Debian_11.1.0_VBM_LinuxVMImages.COM.vdi lfs.qcow2 
 ```
+
+Import this disk image inside libvirt to create new VM.
+If you don't use qemnu you can directly use the VBox image to import config inside VirtualBox, or for VMware user just use the VMware image directly.
+
