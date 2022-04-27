@@ -66,4 +66,26 @@ It's time to compile our toolchain.
 ```
 sh lfs5.sh | tee lfs5.log
 ```
+Once lfs5 is done and everything is okay, we can run the second part of the toolchain to build and place gcc and binutilos inside our future system
+
+```
+sh lfs6.sh | tee lfs6.log
+```
+
+# Entering chroot
+
+
+First change ownership from lfs to root as we'll build the next tools for and from root inside our LFS mount.
+
+```
+chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}
+case $(uname -m) in
+  x86_64) chown -R root:root $LFS/lib64 ;;
+esac
+```
+Then we need to enter the chroot environment using our script:
+
+```
+sh chroot.sh
+```
 
