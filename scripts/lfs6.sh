@@ -12,7 +12,7 @@ cd m4-1.4.19
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf m4-1.4.19
 
 ##############
@@ -47,7 +47,7 @@ make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install
 echo "INPUT(-lncursesw)" > $LFS/usr/lib/libncurses.so
 
 
-cd ..
+cd $LFS/sources
 rm -rvf ncurses-6.3
 
 
@@ -68,7 +68,7 @@ make
 make DESTDIR=$LFS install
 ln -sv bash $LFS/bin/sh
 
-cd ..
+cd $LFS/sources
 rm -rvf bash-5.1.16
 
 ################
@@ -91,7 +91,7 @@ mkdir -pv $LFS/usr/share/man/man8
 mv -v $LFS/usr/share/man/man1/chroot.1 $LFS/usr/share/man/man8/chroot.8
 sed -i 's/"1"/"8"/'                    $LFS/usr/share/man/man8/chroot.8
 
-cd ..
+cd $LFS/sources
 rm -rvf coreutils-9.0
 
 ##################
@@ -106,7 +106,7 @@ make
 make DESTDIR=$LFS install
 
 
-cd ..
+cd $LFS/sources
 rm -rvf diffutils-3.8
 
 ##############
@@ -131,7 +131,7 @@ popd
 make FILE_COMPILE=$(pwd)/build/src/file
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf file-5.41
 
 ################
@@ -149,7 +149,7 @@ cd findutils-4.9.0
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf findutils-4.9.0
 
 ############
@@ -167,7 +167,7 @@ sed -i 's/extras//' Makefile.in
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf gawk-5.1.1
 
 ############
@@ -183,7 +183,7 @@ make
 make DESTDIR=$LFS install
 
 
-cd ..
+cd $LFS/sources
 rm -rvf grep-3.7
 
 ##############
@@ -197,7 +197,7 @@ cd gzip-1.11
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf gzip-1.11
 
 
@@ -217,7 +217,7 @@ cd make-4.3
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf make-4.3
 
 ############
@@ -235,7 +235,7 @@ cd patch-2.7.6
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf patch-2.7.6
 
 ##########
@@ -251,7 +251,7 @@ cd sed-4.8
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf sed-4.8
 
 ##########
@@ -267,7 +267,7 @@ cd tar-1.34
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf tar-1.34
 
 ############
@@ -286,7 +286,7 @@ cd xz-5.2.5
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd $LFS/sources
 rm -rvf xz-5.2.5
 
 ################
@@ -310,7 +310,7 @@ cd       build
 make
 make DESTDIR=$LFS install
 
-cd ../..
+cd $LFS/sources
 rm -rvf binutils-2.38
 
 ############
@@ -359,5 +359,5 @@ make
 make DESTDIR=$LFS install
 ln -sv gcc $LFS/usr/bin/cc
 
-cd ../..
+cd $LFS/sources
 rm -rvf gcc-11.2.0
