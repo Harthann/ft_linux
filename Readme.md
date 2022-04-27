@@ -59,3 +59,11 @@ We now need to create the environment where we'll build the final product, and p
 ```
 sh lfs_env.sh
 ```
+
+# Cross compiling toolchain startup
+
+It's time to compile our toolchain.
+```
+sh lfs5.sh | tee lfs5.log
+```
+
