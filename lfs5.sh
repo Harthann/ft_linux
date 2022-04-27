@@ -16,7 +16,7 @@ cd build
 make
 make install
 
-cd ..
+cd ../..
 rm -rvf binutils-2.38
 
 ############
@@ -130,7 +130,7 @@ readelf -l a.out | grep '/ld-linux'
 rm -v dummy.c a.out
 $LFS/tools/libexec/gcc/$LFS_TGT/11.2.0/install-tools/mkheaders
 
-cd ..
+cd ../..
 rm -rvf glibc-2.35
 
 ##################
@@ -153,5 +153,5 @@ cd       build
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd ../..
 rm -rvf gcc-11.2.0
