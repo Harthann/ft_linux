@@ -95,3 +95,7 @@ Root level directories:
 sh chroot_env.sh
 ```
 
+Once your chroot env is set up you can run the lfs7 script to build the essentials tools to your system
+```
+sh lfs7.sh | tee lfs7.log
+```
