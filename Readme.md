@@ -47,7 +47,7 @@ sh partition.sh
 
 # Sources
 
-Download sources to build our kernel and create repository for them, all version used are from the LFS guide.
+Download sources to build our kernel and create repository for them, all version used are from the LFS guide. Zlib had to be update from 1.2.11 to 1.2.12 due to link down.
 ```
 sh sources.sh
 ```
