@@ -310,7 +310,7 @@ cd       build
 make
 make DESTDIR=$LFS install
 
-cd ..
+cd ../..
 rm -rvf binutils-2.38
 
 ############
@@ -359,5 +359,5 @@ make
 make DESTDIR=$LFS install
 ln -sv gcc $LFS/usr/bin/cc
 
-cd ..
+cd ../..
 rm -rvf gcc-11.2.0
