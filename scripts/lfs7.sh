@@ -19,7 +19,7 @@ cd       build
 make
 make install
 
-cd ..
+cd ../..
 rm -rvf gcc-11.2.0
 
 ##  GETTEXT ##
