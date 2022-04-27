@@ -16,7 +16,7 @@ cd build
 make
 make install
 
-cd ../..
+cd $LFS/sources
 rm -rvf binutils-2.38
 
 ############
@@ -73,7 +73,7 @@ cd ..
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/install-tools/include/limits.h
   
-cd ..
+cd $LFS/sources
 rm -rvf gcc-11.2.0
 
 ####################
@@ -89,7 +89,7 @@ find usr/include -name '.*' -delete
 rm usr/include/Makefile
 cp -rv usr/include $LFS/usr
 
-cd ..
+cd $LFS/sources
 rm -rvf linux-5.16.9
 
 ############
@@ -130,7 +130,7 @@ readelf -l a.out | grep '/ld-linux'
 rm -v dummy.c a.out
 $LFS/tools/libexec/gcc/$LFS_TGT/11.2.0/install-tools/mkheaders
 
-cd ../..
+cd $LFS/sources
 rm -rvf glibc-2.35
 
 ##################
@@ -153,5 +153,5 @@ cd       build
 make
 make DESTDIR=$LFS install
 
-cd ../..
+cd $LFS/sources
 rm -rvf gcc-11.2.0
