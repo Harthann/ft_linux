@@ -52,14 +52,15 @@ Download sources to build our kernel and create repository for them, all version
 sh sources.sh
 ```
 
-# LFS User creation
+# LFS User build environment
 
-groupadd lfs
-useradd -s /bin/bash -g lfs -m -k /dev/null lfs
-passwd lfs <<< $(echo lfs; echo lfs)
+mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}
+
+for i in bin lib sbin; do
+  ln -sv usr/$i $LFS/$i
+done
+
+case $(uname -m) in
+  x86_64) mkdir -pv $LFS/lib64 ;;
+esac
 mkdir -pv $LFS/tools
-mkdir -pv $LFS/sources
-
-chown -v lfs $LFS/tools
-chown -v lfs $LFS/sources
-su - lfs
