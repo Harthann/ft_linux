@@ -44,3 +44,22 @@ Make sure the script use the correct device then run it.
 ```
 sh partition.sh
 ```
+
+# Sources
+
+Download sources to build our kernel and create repository for them, all version used are from the LFS guide.
+```
+sh sources.sh
+```
+
+# LFS User creation
+
+groupadd lfs
+useradd -s /bin/bash -g lfs -m -k /dev/null lfs
+passwd lfs <<< $(echo lfs; echo lfs)
+mkdir -pv $LFS/tools
+mkdir -pv $LFS/sources
+
+chown -v lfs $LFS/tools
+chown -v lfs $LFS/sources
+su - lfs
