@@ -11,7 +11,7 @@ EOF
 
 cat > /etc/systemd/network/10-eth-static.network << "EOF"
 [Match]
-Name=<network-device-name>
+Name=lfs-nieyraud
 
 [Network]
 Address=192.168.0.2/24
@@ -22,7 +22,7 @@ EOF
 
 cat > /etc/systemd/network/10-eth-dhcp.network << "EOF"
 [Match]
-Name=<network-device-name>
+Name=lfs-nieyraud
 
 [Network]
 DHCP=ipv4
@@ -34,9 +34,9 @@ EOF
 cat > /etc/resolv.conf << "EOF"
 # Begin /etc/resolv.conf
 
-domain <Your Domain Name>
-nameserver <IP address of your primary nameserver>
-nameserver <IP address of your secondary nameserver>
+#domain <Your Domain Name>
+#nameserver <IP address of your primary nameserver>
+#nameserver <IP address of your secondary nameserver>
 
 # End /etc/resolv.conf
 EOF
@@ -62,12 +62,12 @@ LOCAL
 EOF
 
 cat > /etc/vconsole.conf << "EOF"
-KEYMAP=de-latin1
+KEYMAP=en_US
 FONT=Lat2-Terminus16
 EOF
 
 cat > /etc/locale.conf << "EOF"
-LANG=<ll>_<CC>.<charmap><@modifiers>
+LANG=en_US.utf8
 EOF
 
 cat > /etc/inputrc << "EOF"
@@ -129,8 +129,8 @@ cat > /etc/fstab << "EOF"
 # file system  mount-point  type     options             dump  fsck
 #                                                              order
 
-/dev/vdb2     /            ext4    defaults            1     1
-/dev/vdb1     swap         swap     pri=1               0     0
+/dev/vdb3     /            ext4    defaults            1     1
+/dev/vdb2     swap         swap     pri=1               0     0
 
 # End /etc/fstab
 EOF
