@@ -136,6 +136,9 @@ rm -rvf binutils-2.38
 tar -xvf gmp-6.2.1.tar.xz
 cd gmp-6.2.1
 
+cp -v configfsf.guess config.guess
+cp -v configfsf.sub   config.sub
+
 ./configure --prefix=/usr    \
             --enable-cxx     \
             --disable-static \
