@@ -30,6 +30,7 @@ make
 patch
 texinfo
 parted
+vim
 "
 
 apt install $DEBS -y
